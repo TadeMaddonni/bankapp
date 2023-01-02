@@ -1,0 +1,55 @@
+@import "../../../global.scss";
+
+.userInfoContainerr {
+	display: flex;
+	justify-content: center;
+}
+
+.userInfoC {
+	margin-top: 40px;
+	padding: 30px;
+	width: 100%;
+	background-color: $strongerWhite;
+	border-radius: 12px;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	height: 70%;
+
+	h2 {
+		align-self: center;
+		font-size: 30px;
+		color: $lightPurple;
+		font-weight: 700;
+		text-align: center;
+	}
+}
+
+.userInfoo {
+	align-self: center;
+	justify-self: center;
+	display: grid;
+	height: fit-content;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	gap: 20px;
+	width: 90%;
+	align-tracks: center;
+	justify-items: center;
+	.propContainer {
+		padding: 7px 10px;
+		display: flex;
+		flex-direction: column;
+	}
+	span {
+		font-size: 18px;
+		color: $lightPurple;
+		text-align: center;
+	}
+	.prop {
+		font-weight: 700;
+		margin-left: 10px;
+		text-align: center;
+	}
+}
+@media (max-width: 500px) {
+}

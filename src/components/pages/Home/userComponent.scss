@@ -1,0 +1,97 @@
+@import "../../../global.scss";
+.userInfo {
+	width: 100%;
+	padding-block: 10px;
+	height: 90px;
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: space-between;
+	.left {
+		height: 100%;
+		width: 80%;
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		.userIcon {
+			fill: $secondaryColor;
+		}
+		.userDataContainer {
+			display: flex;
+			flex-direction: column;
+			.userWelcome {
+				font-size: 13px;
+				color: $grey;
+			}
+			.userName {
+				color: $black;
+				font-size: 20px;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.right {
+		width: 20%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		span {
+			font-size: 20px;
+			font-weight: 700;
+			color: $secondaryColor;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.userInfo {
+		margin-left: 10px;
+		width: 90%;
+		padding-block: 10px;
+		height: 90px;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		justify-content: space-between;
+		.left {
+			height: 100%;
+			width: 80%;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 15px;
+			.userIcon {
+				fill: $secondaryColor;
+			}
+			.userDataContainer {
+				display: flex;
+				flex-direction: column;
+				.userWelcome {
+					font-size: 13px;
+					color: $grey;
+				}
+				.userName {
+					color: $black;
+					font-size: 20px;
+					font-weight: 700;
+				}
+			}
+		}
+
+		.right {
+			width: 20%;
+			height: 100%;
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+			span {
+				margin-bottom: 10px;
+				font-size: 20px;
+				font-weight: 700;
+				color: $secondaryColor;
+			}
+		}
+	}
+}

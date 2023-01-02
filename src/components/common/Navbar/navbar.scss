@@ -1,0 +1,150 @@
+@import "../../../global.scss";
+
+nav {
+	height: 70px;
+	position: fixed;
+	z-index: 800;
+	top: 0;
+	padding-block: 14px;
+	background-color: $primaryColor;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	// box-shadow: 0px 2px 0px 0px rgb(206, 206, 206);
+	justify-content: center;
+	box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.2);
+
+	.navContainer {
+		width: 100%;
+		max-width: 1100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.left {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 50%;
+			height: 100%;
+			.logoContainer {
+				display: flex;
+				flex-direction: column;
+				.logo {
+					font-size: 22px;
+					font-weight: 600;
+					text-align: center;
+					color: $secondaryColor;
+					text-align: center;
+				}
+				.slogan {
+					text-align: center;
+					font-size: 14px;
+					color: $black;
+				}
+			}
+
+			.hamburguer {
+				display: none;
+			}
+		}
+		.right {
+			width: 50%;
+			height: 100%;
+			ul {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				gap: 20px;
+				align-items: center;
+				justify-content: flex-end;
+				margin: 0;
+				list-style: none;
+				li {
+					a {
+						text-decoration: none;
+						font-size: 14px;
+						font-weight: 500;
+						&:visited {
+							color: black;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	nav {
+		.navContainer {
+			width: 100%;
+			padding-inline: 0;
+			.left {
+				padding-left: 10px;
+				width: 100%;
+				.hamburger {
+					margin-right: 20px;
+					width: 22px;
+					height: 20px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					cursor: pointer;
+					z-index: 1200;
+
+					span {
+						width: 100%;
+						height: 3px;
+						background-color: $black;
+						transform-origin: left;
+						transition: all 1s ease;
+					}
+
+					&.active {
+						span {
+							background-color: $primaryColor;
+							&:first-child {
+								transform: rotate(50deg);
+							}
+							&:nth-child(2) {
+								opacity: 0;
+							}
+							&:last-child {
+								transform: rotate(-50deg);
+							}
+						}
+					}
+				}
+			}
+			.right {
+				height: 100vh;
+				background-color: $secondaryColor;
+				width: 200px;
+				position: fixed;
+				top: 0;
+				right: -250px;
+				z-index: 1000;
+				transition: all 1s ease;
+				ul {
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					li {
+						a {
+							font-weight: 500;
+							font-size: 18px;
+							color: $primaryColor;
+							&:visited {
+								color: $primaryColor;
+							}
+						}
+					}
+				}
+
+				&.active {
+					right: 0;
+				}
+			}
+		}
+	}
+}

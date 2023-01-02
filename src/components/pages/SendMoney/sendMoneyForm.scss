@@ -1,0 +1,30 @@
+@import "../../../global.scss";
+
+.sendMoneyContainer {
+	.formContainer {
+		padding: 50px;
+		.sendMoneyForm {
+			width: 70%;
+
+			button {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+@media (max-width: 550px) {
+	.sendMoneyContainer {
+		.formContainer {
+			padding: 10px;
+			.sendMoneyForm {
+				width: 100%;
+				padding: 15px;
+
+				button {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+} ;

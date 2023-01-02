@@ -1,0 +1,104 @@
+@import "../../../global.scss";
+
+.formContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	.form {
+		padding: 50px;
+		border-radius: 3px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		h3 {
+			font-size: 40px;
+			color: $secondaryColor;
+			text-align: center;
+		}
+		.inputContainer {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			input {
+				width: 100%;
+				margin-left: 5px;
+				padding: 7px 20px;
+				border: 1px solid $ink30;
+				border-radius: 5px;
+				font-size: 14px;
+
+				&::placeholder {
+					font-style: italic;
+					color: grey;
+				}
+
+				&:focus {
+					outline: 2px solid $lightPurple;
+				}
+			}
+
+			.signUpLink {
+				width: 100%;
+				color: $black;
+				font-size: 12px;
+				font-style: italic;
+				text-align: center;
+			}
+
+			button {
+				width: 100%;
+				padding: 8px 20px;
+				font-size: 16px;
+				background-color: $secondaryColor;
+				border: 2px solid $secondaryColor;
+				border-radius: 5px;
+				color: $primaryColor;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.formContainer {
+		.form {
+			width: 100%;
+			h3 {
+				font-size: 40px;
+				color: $secondaryColor;
+				text-align: center;
+			}
+			.inputContainer {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				input {
+					width: 100%;
+					margin-left: 5px;
+					padding: 10px 20px;
+					border: 1px solid $ink30;
+					border-radius: 5px;
+					font-size: 14px;
+				}
+
+				.signUpLink {
+					width: 100%;
+					color: $black;
+					font-size: 12px;
+					font-style: italic;
+				}
+
+				button {
+					width: 100%;
+					padding: 8px 20px;
+					font-size: 16px;
+					background-color: $secondaryColor;
+					border: 2px solid $secondaryColor;
+					border-radius: 5px;
+					color: $primaryColor;
+				}
+			}
+		}
+	}
+}

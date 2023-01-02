@@ -1,0 +1,73 @@
+@import "../../../global.scss";
+
+.paginateContainer {
+	display: flex;
+	margin-top: 60px;
+	width: 100%;
+	justify-content: center;
+	gap: 20px;
+	.paginateButton {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 40px;
+		width: 40px;
+		border-radius: 10px;
+		background-color: white;
+
+		&.disabled {
+			opacity: 40%;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.transactionsTitleContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.transactionPage {
+	font-size: 15px;
+	color: $lightPurple;
+}
+
+@media (max-width: 500px) {
+	.paginateContainer {
+		display: flex;
+		margin-top: 60px;
+		width: 100%;
+		justify-content: center;
+		gap: 20px;
+		.paginateButton {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 40px;
+			width: 40px;
+			border-radius: 10px;
+			background-color: white;
+
+			&.disabled {
+				opacity: 40%;
+				cursor: not-allowed;
+			}
+		}
+	}
+
+	.transactionsTitleContainer {
+		margin-bottom: 40px;
+		flex-direction: column;
+		gap: 25px;
+		justify-content: center;
+
+		.transactionsTitle {
+			text-align: center;
+		}
+	}
+
+	.transactionPage {
+		font-size: 15px;
+		color: $lightPurple;
+	}
+} ;

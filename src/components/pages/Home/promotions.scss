@@ -1,0 +1,128 @@
+@import "../../../global.scss";
+
+.promotionsContainer {
+	margin-top: 50px;
+	width: 100%;
+	border-radius: 10px;
+
+	.promotionTitle {
+		color: $black;
+		font-weight: 700;
+		font-size: 40px;
+	}
+
+	.promotionsMenu {
+		display: flex;
+		gap: 20px;
+		margin-top: 20px;
+		.promotion {
+			padding: 8px 20px;
+			border-radius: 15px;
+			background-color: $primaryColor;
+			border: 1px solid $grey;
+			font-weight: 500;
+			font-size: 14px;
+
+			&.active {
+				border: none;
+				background-color: $secondaryColor;
+				color: $primaryColor;
+			}
+		}
+	}
+	.promoAdd {
+		width: 50%;
+		margin-block: 40px;
+		padding: 25px 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 40px;
+		background-color: $strongerWhite;
+		img {
+			object-fit: contain;
+		}
+
+		div {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			span {
+				color: $secondaryColor;
+				font-weight: 700;
+				font-size: 20px;
+			}
+
+			p {
+				color: $black;
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.promotionsContainer {
+		padding-inline: 10px;
+		margin-top: 50px;
+		width: 100%;
+		border-radius: 10px;
+
+		.promotionTitle {
+			color: $black;
+			font-weight: 800;
+			font-size: 30px;
+		}
+
+		.promotionsMenu {
+			display: flex;
+			gap: 10px;
+			margin-top: 20px;
+			.promotion {
+				padding: 4px 10px;
+				border-radius: 15px;
+				background-color: $primaryColor;
+				border: 1px solid $grey;
+				font-weight: 500;
+
+				&.active {
+					border: none;
+					background-color: $secondaryColor;
+					color: $primaryColor;
+				}
+			}
+		}
+		.promoAdd {
+			width: 100%;
+			margin-block: 40px;
+			padding: 25px 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 40px;
+			background-color: $strongerWhite;
+			img {
+				object-fit: contain;
+				width: 50%;
+			}
+
+			div {
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				span {
+					color: $secondaryColor;
+					font-weight: 700;
+					font-size: 14px;
+				}
+
+				p {
+					color: $black;
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}

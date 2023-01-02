@@ -1,0 +1,35 @@
+@import "../../../global.scss";
+
+.filterContainer {
+	margin-right: 70px;
+}
+.btnDropdown {
+	background-color: $lightPurple;
+	border: none;
+	&:active {
+		background-color: $lightPurple;
+	}
+
+	&:hover {
+		background-color: $lightPurple;
+	}
+
+	&.btn.show {
+		background-color: $lightPurple;
+	}
+
+	.dropdownItem {
+		&:hover {
+			background-color: $lightPurple o !important;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.filterContainer {
+		margin-right: 0;
+	}
+	.btnDropdown {
+		width: 100%;
+	}
+}

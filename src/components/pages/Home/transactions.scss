@@ -1,0 +1,117 @@
+@import "../../../global.scss";
+
+.transactionsContainer {
+	margin-top: 50px;
+	width: 100%;
+	background-color: $strongerWhite;
+	padding: 30px;
+	border-radius: 10px;
+
+	.noTransactions {
+		color: $lightPurple;
+		font-size: 16px;
+	}
+	.transactionTitle {
+		color: $lightPurple;
+		font-size: 30px;
+		font-weight: 700;
+	}
+	.transactionContainer {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+
+		.transaction {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: fit-content;
+			.left {
+				display: flex;
+				gap: 20px;
+				width: 80%;
+				img {
+					width: 50px;
+					height: 50px;
+					object-fit: contain;
+				}
+
+				.transactionDesc {
+					font-size: 18px;
+					font-weight: 600;
+				}
+
+				.transactionDate {
+					color: $lightPurple;
+				}
+			}
+			.amount {
+				font-size: 18px;
+				&.added {
+					color: green;
+				}
+
+				&.spent {
+					color: red;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.transactionsContainer {
+		margin: auto;
+		margin-top: 50px;
+		width: 96%;
+
+		.transactionTitle {
+			color: $lightPurple;
+			font-size: 25px;
+			text-align: center;
+		}
+		.transactionContainer {
+			margin-top: 30px;
+			display: flex;
+			flex-direction: column;
+			gap: 40px;
+
+			.transaction {
+				align-items: flex-start;
+				height: fit-content;
+				.left {
+					display: flex;
+					gap: 20px;
+					width: 80%;
+					img {
+						width: 30px;
+						height: 30px;
+						object-fit: contain;
+					}
+
+					.transactionDesc {
+						font-size: 13px;
+						font-weight: 600;
+						margin-bottom: 0;
+					}
+
+					.transactionDate {
+						color: $lightPurple;
+						font-size: 11px;
+					}
+				}
+				.amount {
+					font-size: 13px;
+					&.added {
+						color: green;
+					}
+
+					&.spent {
+						color: red;
+					}
+				}
+			}
+		}
+	}
+}
