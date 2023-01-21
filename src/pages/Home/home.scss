@@ -19,3 +19,11 @@
 		}
 	}
 }
+
+@media (min-width: 501px) and (max-width: 1100px) {
+	.homeContainer {
+		.home {
+			padding-inline: 30px;
+		}
+	}
+}

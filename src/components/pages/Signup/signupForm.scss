@@ -98,3 +98,44 @@
 		}
 	}
 }
+
+@media (min-width: 601px) and (max-width: 1100px) {
+	.formContainer {
+		.form {
+			width: 80%;
+			.divider {
+				display: flex;
+				flex-direction: column;
+				gap: 30px;
+			}
+			.inputContainer {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				input {
+					width: 100%;
+					padding: 10px 20px;
+					font-size: 14px;
+				}
+
+				.signUpLink {
+					width: 100%;
+					color: $black;
+					font-size: 12px;
+					font-style: italic;
+				}
+
+				button {
+					width: 100%;
+					padding: 8px 20px;
+					font-size: 16px;
+					background-color: $secondaryColor;
+					border: 2px solid $secondaryColor;
+					border-radius: 5px;
+					color: $primaryColor;
+				}
+			}
+		}
+	}
+}
